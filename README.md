@@ -1,4 +1,4 @@
-# API Flask en Google Cloud Run
+# Prueba Técnica GLOBAL_MVM
 
 El presente repositorio proyecto consiste en el desarrollo de una prueba tecnica para acceder a cargos de ingenieria de datos para global MVM. A contunuación, se listan las caracteristicas mas importantes de la misma:
 
