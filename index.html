@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test Frontend</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+    </style>
+</head>
+<body>
+    <h2>Reporte de Empleados</h2>
+    <button id="loadData">Cargar Datos</button>
+    <pre id="data"></pre>
+
+    <script>
+        document.getElementById('loadData').addEventListener('click', function() {
+            const apiUrl = 'https://mi-api-flask-krzpjsiaia-uc.a.run.app/report';
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById('data').textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    console.error('There has been a problem with your fetch operation:', error);
+                });
+        });
+    </script>
+</body>
+</html>

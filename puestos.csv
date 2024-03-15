@@ -1,0 +1,6 @@
+puesto_id,puesto_nombre,depto_id
+101,Analista,1
+102,Gerente,2
+103,Director,2
+104,Asistente,3
+105,Técnico,4
